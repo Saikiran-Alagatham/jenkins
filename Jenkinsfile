@@ -16,7 +16,7 @@ pipeline {
    stage('Agent Node') {
        agent
       {
-          label 'MASTER'
+          label 'Java'
       }
      steps {
         sh 'echo Hello'
