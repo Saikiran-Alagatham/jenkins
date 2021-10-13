@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     environment{
-        temp = abc
+        temp = "abc"
     }
 
   stages {
