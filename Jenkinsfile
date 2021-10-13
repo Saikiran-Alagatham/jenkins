@@ -30,6 +30,9 @@ pipeline {
             }
 
             stage("Environmentals varibles example"){
+                environment{
+                        temp = "def"
+                    }
                     steps{
                         sh 'echo ${temp}'
                     }
