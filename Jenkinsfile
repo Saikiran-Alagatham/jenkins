@@ -10,7 +10,7 @@ pipeline {
           label 'MASTER'
       }
       steps {
-        sh 'echo Hello'
+        sh 'echo Running on master'
       }
     }
    stage('Agent Node') {
@@ -19,9 +19,15 @@ pipeline {
           label 'Java'
       }
      steps {
-        sh 'echo Hello'
+        sh 'echo Running on Agent/workstation'
       }
     }
+    }
+
+    post{
+        always{
+            sh 'echo Example of post section'
+        }
     }
 
 }
