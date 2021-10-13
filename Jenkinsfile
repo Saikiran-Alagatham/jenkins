@@ -3,11 +3,12 @@ pipeline {
     agent any
 
   stages {
-      agent
+     
+   stage('Master Node') {
+        agent
       {
           label 'MASTER'
       }
-   stage('Master Node') {
       steps {
         sh 'echo Hello'
       }
