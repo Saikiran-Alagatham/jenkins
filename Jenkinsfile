@@ -37,6 +37,16 @@ pipeline {
                         sh 'echo ${temp}'
                     }
             }
+
+            stage("Input example"){
+                input{
+                    message ' Approve or not'
+                    ok ' Approve'
+                }
+                    steps{
+                        sh 'echo Process Approved'
+                    }
+            }
     }
 
     post{
